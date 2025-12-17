@@ -1,4 +1,4 @@
-package controllers;
+package timer.controllers;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
@@ -14,7 +14,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.concurrent.TimeUnit;
 
 //=====================================Таймер отключения компьютера==================================================
 public class Main {
@@ -172,10 +171,10 @@ public class Main {
     public void onActionTimersButton() {// Открытие 2-го окна
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("../views/timers.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/views/timers.fxml"));
 
             AnchorPane anchorPane;
-            anchorPane =(AnchorPane) fxmlLoader.load();
+            anchorPane = (AnchorPane) fxmlLoader.load();
             Stage stage = (Stage) startButton.getScene().getWindow();
             Stage timersStage = new Stage();
             timersStage.initModality(Modality.WINDOW_MODAL);

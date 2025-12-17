@@ -1,7 +1,6 @@
-package controllers;
+package timer.controllers;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
@@ -20,6 +19,7 @@ public class Timers {
     public String onActionMinutes10() {
         return "10";
     }
+
     @FXML
     public String onActionMinutes15() {
         return "15";

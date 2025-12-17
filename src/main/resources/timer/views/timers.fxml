@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="210.0" prefWidth="120.0" style="-fx-background-color: #8bd185; -fx-border-color: #c69c6d;"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="timer.controllers.Timers">
+    <children>
+        <Button fx:id="minutes10" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionMinutes10"
+                text="10 м"/>
+        <Button fx:id="minutes15" layoutX="14.0" layoutY="46.0" mnemonicParsing="false" onAction="#onActionMinutes15"
+                text="15 м"/>
+        <Button layoutX="14.0" layoutY="78.0" mnemonicParsing="false" text="20 м"/>
+        <Button layoutX="14.0" layoutY="110.0" mnemonicParsing="false" text="30 м"/>
+        <Button layoutX="14.0" layoutY="142.0" mnemonicParsing="false" text="40 м"/>
+        <Button layoutX="66.0" layoutY="14.0" mnemonicParsing="false" text="1.5 ч"/>
+        <Button layoutX="66.0" layoutY="46.0" mnemonicParsing="false" text="2.5 ч"/>
+        <Button layoutX="66.0" layoutY="78.0" mnemonicParsing="false" text="3.5 ч"/>
+        <Button layoutX="66.0" layoutY="110.0" mnemonicParsing="false" text="4.5 ч"/>
+        <Button layoutX="66.0" layoutY="142.0" mnemonicParsing="false" text="5.5 ч"/>
+        <Button fx:id="cancelButton" layoutX="34.0" layoutY="178.0" mnemonicParsing="false"
+                onAction="#onActionCancelButton" text="Cancel"/>
+    </children>
+</AnchorPane>

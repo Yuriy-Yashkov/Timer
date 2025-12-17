@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.14'
+}
+
+group = 'timer'
+version = '1.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "17.0.9"
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+application {
+    mainClass = 'timer.Main' // ⚠️ замени на свой класс
+}
+
+tasks.register('fatJar', Jar) {
+    group = 'build'
+    description = 'Создает jar с зависимостями'
+    archiveBaseName.set('Timer')       // имя файла
+    archiveVersion.set('')             // убираем версию
+    archiveClassifier.set('')          // убираем "-all"
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes 'Main-Class': 'timer.Main'
+    }
+
+    from(sourceSets.main.output)
+
+    dependsOn(configurations.runtimeClasspath)
+    from({
+        configurations.runtimeClasspath
+                .filter { it.name.endsWith('jar') }
+                .collect { zipTree(it) }
+    })
+}

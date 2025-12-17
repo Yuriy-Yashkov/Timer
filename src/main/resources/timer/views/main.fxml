@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0"
+            prefWidth="300.0" style="-fx-background-color: #8bd185; -fx-border-color: #c69c6d;"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="timer.controllers.Main">
+    <children>
+        <Label layoutX="65.0" layoutY="25.0" text=":">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <Label layoutX="10.0" layoutY="70.0" text="Часы">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="70.0" layoutY="70.0" text="Минуты">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Button fx:id="startButton" layoutX="10.0" layoutY="95.0" mnemonicParsing="false"
+                onAction="#onActionStartButton" text="Start">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Button>
+        <Button fx:id="pauseButton" disable="true" layoutX="70.0" layoutY="95.0" mnemonicParsing="false"
+                onAction="#onActionPauseButton" text="Pause">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Button>
+        <Label layoutX="138.0" layoutY="10.0" prefWidth="177.0" text="Таймер отключения" textFill="#a60a7d"
+               wrapText="true">
+            <font>
+                <Font name="Gabriola" size="22.0"/>
+            </font>
+        </Label>
+        <Label layoutX="167.0" layoutY="42.0" text="компьютера" textFill="#a60c7f">
+            <font>
+                <Font name="Gabriola" size="22.0"/>
+            </font>
+        </Label>
+        <Spinner fx:id="hourSpinner" editable="true" layoutX="15.0" layoutY="10.0" prefHeight="25.0" prefWidth="40.0"
+                 style="-fx-font-size: 15" styleClass="STYLE_CLASS_SPLIT_ARROWS_VERTICAL"/>
+        <Spinner fx:id="minutesSpinner" editable="true" layoutX="80.0" layoutY="10.0" prefHeight="10" prefWidth="40.0"
+                 style="-fx-font-size: 15" styleClass="STYLE_CLASS_SPLIT_ARROWS_VERTICAL"/>
+        <Label fx:id="label1" layoutX="140.0" layoutY="104.0" textFill="#a60c7f">
+            <font>
+                <Font name="Gabriola" size="22.0"/>
+            </font>
+        </Label>
+        <Label fx:id="label2" layoutX="167.0" layoutY="124.0" textFill="#a60c7f">
+            <font>
+                <Font name="Gabriola" size="22.0"/>
+            </font>
+        </Label>
+        <Label fx:id="label3" layoutX="10.0" layoutY="140.0" textFill="#a60c7f">
+            <font>
+                <Font name="Gabriola" size="22.0"/>
+            </font>
+        </Label>
+        <Label fx:id="secondsLabel" layoutX="160.0" layoutY="140.0" textFill="#a60c7f">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <CheckBox fx:id="timeCheckBox" layoutX="10.0" layoutY="178.0" mnemonicParsing="false"
+                  text="Задать время окончания">
+            <font>
+                <Font size="10.0"/>
+            </font>
+        </CheckBox>
+        <Label layoutX="240.0" layoutY="200.0" text="27.02.2021">
+            <font>
+                <Font size="8.0"/>
+            </font>
+        </Label>
+        <Button fx:id="timersButton" layoutX="160.0" layoutY="98.0" mnemonicParsing="false"
+                onAction="#onActionTimersButton" text="Timers"/>
+    </children>
+</AnchorPane>
