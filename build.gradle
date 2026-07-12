@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.14'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
 group = 'timer'
@@ -22,8 +22,12 @@ javafx {
     modules = ['javafx.controls', 'javafx.fxml']
 }
 
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
 application {
-    mainClass = 'timer.Main' // ⚠️ замени на свой класс
+    mainClass = 'timer.Launcher' // ⚠️ замени на свой класс
 }
 
 tasks.register('fatJar', Jar) {
@@ -35,7 +39,7 @@ tasks.register('fatJar', Jar) {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
     manifest {
-        attributes 'Main-Class': 'timer.Main'
+        attributes 'Main-Class': 'timer.Launcher'
     }
 
     from(sourceSets.main.output)
